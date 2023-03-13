@@ -1,6 +1,7 @@
 using Domain.UseCase.Gateways;
 using Microsoft.AspNetCore.Mvc;
 using VirtualEducation.DDD.Domain.Student.Commands;
+using VirtualEducation.DDD.Domain.Student.Entities;
 
 namespace VirtualEducation.DDD.API.Controllers
 {
@@ -20,7 +21,7 @@ namespace VirtualEducation.DDD.API.Controllers
         [HttpPost]
         public async Task Post(CreateStudentCommand command)
         {
-            await _useCase.CreateStudent(command);
+             await _useCase.CreateStudent(command);
         }
 
         [HttpPost("addAcount")]
